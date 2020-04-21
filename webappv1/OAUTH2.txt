@@ -1,0 +1,35 @@
+which oauth flow should I use - AUTH0
+https://auth0.com/docs/api-auth/which-oauth-flow-to-use#is-the-client-a-native-mobile-app-
+
+Different authorisation flows - AUTH0 
+https://auth0.com/docs/flows
+
+OAUTH primer - Ping Identity
+https://www.pingidentity.com/content/dam/pic/downloads/resources/white-papers/en/essential-oauth-primer-white-paper.pdf
+
+Authorization code flow - Ping Identity
+https://developer.pingidentity.com/en/blog/posts/2019/what-are-oauth-2-0-grant-types-part-1-authorization-code-flow.html?utm_source=Social&utm_medium=linkedin
+
+Implicit flow - Ping Identity
+https://developer.pingidentity.com/en/blog/posts/2019/what-are-oauth-2-0-grant-types-part-2-implicit-flow.html
+
+Intro to OAUTH - Apigee(google)
+https://docs.apigee.com/api-platform/security/oauth/oauth-home
+
+Intro to OAUTH - Google Developer
+https://developers.google.com/identity/protocols/OAuth2
+
+Web API design Best practices for crafting the interfaces - Apigee(google)
+https://cloud.google.com/files/apigee/apigee-web-api-design-the-missing-link-ebook.pdf
+
+Application types and OAUTH - Microsoft Identity platform
+https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-app-types
+
+Difference between Authorzation code flow and implicit grant flow - stack overflow.
+https://stackoverflow.com/questions/16321455/what-is-the-difference-between-the-oauth-authorization-code-and-implicit-workflo
+
+Oauth2 simplified
+https://aaronparecki.com/oauth-2-simplified/#web-server-apps
+
+A quick guide to Oauth
+https://oauth.net/2/

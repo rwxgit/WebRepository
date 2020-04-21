@@ -1,0 +1,57 @@
+The DAO object should only used for CRUD. Any logic should be implemented in service layer
+This helps to add one more abstraction layer.
+
+When apache commons network package is included using the maven dependency list,
+it failed to recognise the FTPClient and FTPReply objects. 
+So added the jar in buidpath & commented the dependency in build information.
+
+For ftpdownload, use the following code
+
+https://www.journaldev.com/974/java-ftp-download-apache-commons-net
+
+
+FTP setup
+--------
+Did setup up a ftp service in Ubuntu machine and installed filezilla client.
+To test the setup ftp service is accessible in internet
+	use the below link ==> https://ftptest.net/
+To test whether to connect to a external ftp server, use the below test server
+available in internet.
+
+ftp server 	==> 
+user name	==>
+password 	==>
+
+public static void main(String[] args) {
+        try {
+        	DownloadFileService ftpDownloader =
+                new DownloadFileService("ftp_server.journaldev.com", "ftp_user@journaldev.com", "ftpPassword");
+            ftpDownloader.downloadFile("sitemap.xml", "/Users/pankaj/tmp/sitemap.xml");
+            System.out.println("FTP File downloaded successfully");
+            ftpDownloader.disconnect();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+Problems and solution
+---------------------    
+1. with web.xml deployment descriptor version as 2.4 the tomcat server didn't start.
+Changes the version to 3.0 and the tomcat server did start, but the html request was
+not served. Now need to identify if something has to be changed to support the 
+default page or not. 
+
+The problem was with the commons-net-3.6.jar. Deleted and rebuilt the application to 
+resolve this problem
+
+
+Design concept
+1. material design
+2. Navigation menu
+3.
+
+Including javascript in web pages
+https://www.journaldev.com/4792/jquery-ui-tabs-horizontal-and-vertical-example-with-java-web-application-integration
+https://www.mkyong.com/spring-mvc/spring-mvc-how-to-include-js-or-css-files-in-a-jsp-page/
+
+

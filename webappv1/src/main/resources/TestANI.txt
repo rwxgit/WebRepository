@@ -1,0 +1,21 @@
+Design consideration.
+1. The UI can be built like that of a CICS application
+	List all the transactions with a number against the transaction type
+	User provide the transaction type that they want to test as input in a text box.
+
+2. The UI can be built like a regular web-app.
+	User will be provided with a drop down menu. Based on what they choose, 
+	the data will be used to prepare the transaction.
+
+The drop down list example for this is picked from
+http://fruzenshtein.com/spring-mvc-form-select-tag/
+
+locally available form options
+<form:option value="01">Balance Enquiry</form:option>
+<form:option value="02">Cash withdrawal</form:option>
+
+The option that is worked is based on the example from above website.
+http://fruzenshtein.com/spring-mvc-form-select-tag/
+
+to know more about spring annotations.
+https://javabeat.net/spring-annotations/
