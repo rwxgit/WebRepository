@@ -1,0 +1,138 @@
+body {
+	background-color: #e7e7e7;
+	font-family: Helvetica;
+	font-size: 20px;
+	color: #666;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	
+}
+
+.error{
+	color: red;
+	font-size: 12px;
+}
+
+.wrapper {
+	width: 1200px;
+	height: 1200px;
+	margin: 0px auto;
+	border: 0px red;
+	background: white;	
+	
+	/* margin: 0 auto; */
+}
+
+.container {
+	min-height: 400px;
+	/* border-top: 1px solid gray; */
+	margin: 0px;
+	border: 0px blue;
+	padding: 20px;
+	background: white;
+	
+}
+
+.container_home {
+	margin: 10px;
+	border: 0px;
+	padding-left: 350px;
+	padding-top: 150px;
+	background: white;
+	text-decoraltion: none;
+	/* font-size: 20px;	 */
+}
+
+table.test_table, tr.test_table td.test_table {
+	border-collapse: collapse;
+	border: 1px solid green;
+	width=auto;
+}
+
+table {
+   table-layout: fixed;
+   /* border: 1px solid black;*/
+   width: auto;
+}
+
+.multiDownloadTable tr{
+	line-height: 20px;
+}
+
+.widthSet{/* this div class is used to create uniform spacing in for table columns*/
+	width: 150px;
+}
+
+.container_filedown {
+	margin: 0px;
+	border: 0px blue;
+	padding-left: 350px;
+	padding-top: 150px;
+	background: white;	
+}
+
+.container_filedown_2{
+	margin: 0px;
+	border: 0px;
+	padding-left: 500px;
+	padding-top: 30px;
+	background: white;
+}
+
+.container_filesdown {
+	margin: 0px;
+	border: 0px;
+	padding-left: 350px;
+	padding-top: 150px;
+	background: white;
+}
+
+.container_filesdown_2 {
+	margin: 0px;
+	border: 0px;
+	padding-left: 350px;
+	padding-top: 30px;
+	background: white;
+}
+
+.container_filesdown_2_2 {
+	margin: 0px;
+	border: 0px;
+	padding-left: 50px;
+}
+
+.container_filesdown_3 {
+	margin: 0px;
+	border: 0px;
+	padding-left: 570px;
+	padding-top: 30px;
+	background: white;
+}
+
+.container_info_ANI_1 {
+	margin: 0px;
+	border: 0px;
+	padding-left: 300px;
+	padding-top: 150px;
+}
+
+.container_info_ANI_2 {
+	margin: 0px;
+	border: 0px;
+	padding-left: 400px;
+	padding-top: 25px;
+}
+
+ul.unordlist{
+	list-style-type: none;
+}
+
+
+/* text-align specific to web engine, doesn't help as the alignment gets changes,when error messages are thrown for these elements in them 
+	so text align property is removed everywhere. Instead it is managed by padding property. this is not good for responsive web design though.
+	
+	text-align: -webkit-center;
+	text-align: -moz-center;
+	text-align: -ms-center
+*/	

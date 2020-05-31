@@ -1,0 +1,53 @@
+package com.gandhi.springweb.pojo;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({ "Data", "Risk" })
+public class PaymentReq {
+
+	@JsonProperty("Data")
+	private Data data;
+	@JsonProperty("Risk")
+	private Risk risk;
+	@JsonIgnore
+	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+	@JsonProperty("Data")
+	public Data getData() {
+		return data;
+	}
+
+	@JsonProperty("Data")
+	public void setData(Data data) {
+		this.data = data;
+	}
+
+	@JsonProperty("Risk")
+	public Risk getRisk() {
+		return risk;
+	}
+
+	@JsonProperty("Risk")
+	public void setRisk(Risk risk) {
+		this.risk = risk;
+	}
+
+	@JsonAnyGetter
+	public Map<String, Object> getAdditionalProperties() {
+		return this.additionalProperties;
+	}
+
+	@JsonAnySetter
+	public void setAdditionalProperty(String name, Object value) {
+		this.additionalProperties.put(name, value);
+	}
+
+}

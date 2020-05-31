@@ -1,0 +1,32 @@
+{
+	"Data": {
+		"Initiation": {
+			"InstructionIdentification": "instr-identification",
+			"EndToEndIdentification": "e2e-identification",
+			"InstructedAmount": {
+				"Amount": "50.00",
+				"Currency": "GBP"
+			},
+			"DebtorAccount": {
+				"SchemeName": "UK.OBIE.SortCodeAccountNumber",
+				"Identification": "60225339600416"
+			},
+			"CreditorAccount": {
+				"SchemeName": "IBAN",
+				"Identification": "BE56456394728288",
+				"Name": "ACME DIY",
+				"SecondaryIdentification": "secondary-identif"
+			},
+			"RemittanceInformation": {
+				"Unstructured": "Tools",
+				"Reference": "Tools"
+			}
+		}
+	},
+	"Risk": {
+		"PaymentContextCode": "EcommerceGoods",
+		"MerchantCategoryCode": null,
+		"MerchantCustomerIdentification": null,
+		"DeliveryAddress": null
+	}
+}

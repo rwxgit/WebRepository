@@ -1,0 +1,73 @@
+The objective of this project is to create a Spring web application using Spring boot.
+
+used the below website for reference.
+
+https://dzone.com/articles/creating-a-web-application-with-spring-boot
+
+This application will be extended to support the ATM web application.
+
+If any security package is included, then a default login screen is displayed. Currently I have commented out the security dependency.
+
+Security can be configured in different ways. Please find the below link
+
+https://www.baeldung.com/spring-boot-security-autoconfiguration
+
+Tries with disabling the security configuration using the properties. It didn't work. But excluding the class in the application class worked.
+ 
+
+//The below code snippet uses the hardcoded query parameter in the URI.
+
+        String weatherResourcUrl_1 = "http://api.openweathermap.org/data/2.5/weather?q=delhi&appid=3b0e648a1c27382ff83e03d7bf60f28a";
+		RestTemplate restTemplate = new RestTemplate();
+		
+		String response = restTemplate.getForObject(weatherResourcUrl_1, String.class);
+		System.out.println("The result value for Url_1 is ===> " + response);
+		
+		
+//Consume query parameters passed dynamically. Also instead of getting the response as a string get it as an Entity object
+
+        String weatherResourcUrl_0 = "http://api.openweathermap.org/data/2.5/weather";
+        RestTemplate restTemplate = new RestTemplate();
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        
+        UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(weatherResourcUrl_0)
+				.queryParam("q", "delhi")
+				.queryParam("appid", "3b0e648a1c27382ff83e03d7bf60f28a");
+        
+        HttpEntity<?> entity = new HttpEntity<>(headers);
+        HttpEntity<String> response1 = restTemplate.exchange(builder.toUriString(), HttpMethod.GET, entity, String.class);
+        System.out.println("The result value for Url_0 is ===> " + response1);
+
+Used http://www.jsonschema2pojo.org/ to create a POJO from a JSON object
+
+//Convert the json to POJO. Th ObjectMapper class from Jackson is used for this conversion.
+import com.fasterxml.jackson.databind.ObjectMapper
+		
+		ObjectMapper objectMapper = new ObjectMapper();
+		SampleDao jsonObject = null;
+		try {
+			jsonObject = objectMapper.readValue(response2.getBody(), SampleDao.class);
+			
+		} catch (JsonParseException e) {
+			e.printStackTrace();
+		} catch (JsonMappingException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-oauth2-client</artifactId>
+		</dependency>
+		
+		
+To by pass SSL validation
+
+	https://stackoverflow.com/questions/4072585/disabling-ssl-certificate-validation-in-spring-resttemplate

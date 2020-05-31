@@ -1,0 +1,47 @@
+/* add a background color to the navigation pane */
+#topnav {
+	overflow: hidden;
+	background-color: #333;
+	margin-top: 50px;
+	margin-left: 50px;
+	margin-right: 50px;
+	padding-left: 30px;
+	padding-right: 30px;
+	/* margin: 10px; 
+	width: 1200px; */
+}
+
+/* style the links inside the navigation bar */
+#topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+#topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+#topnav a.active {
+	background-color: maroon;
+	color: white;
+}
+
+/* .content {
+  padding: 16px;
+} */
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+/* .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+} */
+
+/* .sticky + .content {
+  padding-top: 60px;
+} */

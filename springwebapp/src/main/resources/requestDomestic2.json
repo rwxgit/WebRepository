@@ -1,0 +1,28 @@
+{
+	"Data": {
+		"Initiation": {
+			"InstructionIdentification": "instr-identification",
+			"EndToEndIdentification": "e2e-identification",
+			"InstructedAmount": {
+				"Amount": "10.00",
+				"Currency": "GBP"
+			},
+			"DebtorAccount": {
+				"SchemeName": "UK.OBIE.SortCodeAccountNumber",
+				"Identification": "50000012345602"
+			},
+			"CreditorAccount": {
+				"SchemeName": "UK.OBIE.SortCodeAccountNumber",
+				"Identification": "50000087654301",
+				"Name": "ACME DIY"
+			},
+			"RemittanceInformation": {
+				"Unstructured": "Tools",
+				"Reference": "Tools"
+			}
+		}
+	},
+	"Risk": {
+		
+	}
+}
